@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: var(--font-color);
+    font-family: system-ui;
+    text-decoration: none;
+}
+:root{
+    --font-color: #000;
+    --background-color: #f0f0f0;
+    --special: #0056f6;
+}
+::-webkit-scrollbar{
+    width: 4px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 1px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: var(--special);
+}
+::selection{
+    background-color: var(--special);
+    color: var(--font-color);
+}
+body{
+    background-color: var(--background-color);
+    direction: rtl;
+}
+header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--special);
+    border-radius: 0 0 10px 10px;
+}
+header h1{
+    font-size: 40px;
+    cursor: pointer;
+}
+header nav a{
+    margin: 0 10px;
+    text-decoration: none;
+    transition: .25s;
+    font-weight: 500;
+}
+header nav a:hover{
+    color: var(--special);
+    text-decoration: underline;
+}
+.title{
+    margin-top: 35px;
+    text-align: center;
+    font-optical-sizing: 35px;
+}
+.main{
+    display: flex;
+    margin-top: 50px;
+}
+.main .box{
+    border: 1px solid var(--special);
+    width: 45% ;
+    margin: auto;
+    padding: 20px 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: .3s;
+}
+.main .box:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 10px var(--special);
+}
+.main .box h2{
+    padding: 5px;
+    border-bottom: 1px solid var(--special);
+    border-radius: 0 0 3px 3px;
+}
+.main .box p{
+    padding: 15px;
+    line-height: 30px;
+}
+#how-we{
+    margin-top: 50px;
+    padding-top: 25px;
+    color: var(--font-color);
+}
+.conainer{
+    padding: 20px;
+    text-align: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--special);
+}
+.conainer h3{
+    line-height: 50px;
+}
+.contact-we .cards{
+    display: flex;
+    margin-top: 60px;
+    text-decoration: none;
+}
+.contact-we .cards .card{
+    border: 1px solid var(--special);
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    transition: .4s ease;
+    box-shadow: 0px 0px 15px var(--special);
+    margin-bottom: 70px;
+}
+.contact-we .cards .card:hover{
+    box-shadow: 0px 0px 25px var(--special);
+    transform: scale(1.05);
+}
+.contact-we .textbox .all{
+    text-align: center;
+}
+.contact-we .textbox .all form h3{
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.contact-we .textbox .all form input{
+    background-color: var(--background-color);
+    border: 1px solid var(--special);
+    padding: 9px 5px;
+    width: 50%;
+    border-radius: 5px;
+    text-align: left;
+    transition: .3s;
+}
+.contact-we .textbox .all form input:hover ,.contact-we .textbox .all form textarea:hover{
+    box-shadow: 0px 0px 25px var(--special);
+}
+.contact-we .textbox .all form textarea{
+    width: 40%;
+    height: 300px;
+    transition: .3s;
+    background-color: var(--background-color);
+    border: 1px solid var(--special);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: left;
+}
+.contact-we .textbox .all form button{
+    background-color: var(--special);
+    border-radius: 6px;
+    padding: 5px 15px;
+    border: none;
+    transition: .3s;
+    border: 1px solid var(--special);
+    cursor: pointer;
+}
+.contact-we .textbox .all form button:hover{
+    background-color: var(--background-color);
+}
+footer p{
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+#contact-we{
+    border-top: 1px solid var(--special);
+    padding-top: 25px;
+}
+@media (max-width: 1100px) {
+    .contact-we .cards{
+        display: block;
+        text-align: center;
+    }
+    .contact-we .cards .card{
+        width: 90%;
+        border: none;
+    }
+}
+@media (max-width: 650px) {
+    .contact-we .textbox .all form input{
+        width: 80%;
+    }
+    .contact-we .textbox .all form textarea{
+        width: 67%;
+    }
+}
+@media (max-width: 500px) {
+    header{
+        display: block;
+        text-align: center;
+    }
+    header h1{
+        padding-bottom: 15px;
+    }
+    header nav a{
+        margin: 5px 30px;
+    }
+}
+@media (max-width: 450px) {
+    .main{
+        display: block;
+    }
+    .main .box{
+        width: 90%;
+        margin: 20px;
+    }
+}
+@media (max-width: 400px) {
+    header nav a{
+        margin: 5px 20px;
+    }
+}
